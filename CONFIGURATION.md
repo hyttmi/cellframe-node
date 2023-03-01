@@ -8,7 +8,7 @@ When installing Cellframe node for the first time with default values, the file 
 ```
 [general]
 ...
-debug_mode=false <-- Enable debug mode, prints debug messages in log files
+debug_mode=false <-- If set to true, prints debug information on log files
 ...
 auto_online=true <-- Bring up links and sync everything automatically
 
