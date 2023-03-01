@@ -19,7 +19,7 @@ auto_online=true <-- Bring up links and sync everything automatically
 [resources]
 ...
 log_file=/opt/cellframe-node/var/log/cellframe-node.log <-- Log file location
-wallets_path=/opt/cellframe-node/var/lib/wallet <-- Where your created wallets will be located
+wallets_path=/opt/cellframe-node/var/lib/wallet <-- Location of created wallets
 dap_global_db_path=/opt/cellframe-node/var/lib/global_db <-- GlobalDB path
 ...
 ```
@@ -33,4 +33,14 @@ py_load=false <-- Set to true for enabling Python plugins support
 py_path=/opt/cellframe-node/var/lib/plugins <-- Path to Python plugins
 ```
 
+## Configuration for networks
+Each network has its own settings file placed in `/opt/cellframe-node/etc/network/`:
 
+```
+/opt/cellframe-node/etc/network/
+                                ├── Backbone.cfg
+                                ├── kelvpn-minkowski.cfg
+                                ├── mileena.cfg
+                                └── subzero.cfg
+```
+By default, each network role is configured as `full` role.
