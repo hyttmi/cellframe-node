@@ -1,8 +1,9 @@
 # Configuration
 ## Cellframe node configuration
-Cellframe node configuration is done by editing `cellframe-node.cfg` file, which can be found in `/opt/cellframe-node/etc/`.
 
-When installing Cellframe node for the first time with default values, the file should be ready to provide somewhat sane default configuration for your node. However, on some cases you might want or need to change some of the values (e.g. where wallets are stored by default).
+Cellframe node configuration is done by editing `cellframe-node.cfg` file, which can be found in `/opt/cellframe-node/etc/` for Linux systems. For MacOS, the file is available in `/Users/$USER/Applications/CellFrame.app/contents/resources/etc/cellframe-node.cfg`
+
+When installing Cellframe node for the first time with default values, the file should provide somewhat sane default configuration for your node. However, on some cases you might want or need to change some of the values.
 
 ### General configuration
 ```
@@ -34,7 +35,7 @@ py_path=/opt/cellframe-node/var/lib/plugins <-- Path to Python plugins
 ```
 
 ## Configuration for networks
-Each network has its own settings file placed in `/opt/cellframe-node/etc/network/`:
+Each network has its own settings file placed in `/opt/cellframe-node/etc/network/`. On Linux systems:
 
 ```
 /opt/cellframe-node/etc/network/

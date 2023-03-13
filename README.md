@@ -11,8 +11,7 @@ sudo apt install build-essential cmake dpkg-dev libpython3-dev libjson-c-dev lib
 
 On MacOS:
 
-Install latest XCode from App Store or directly from official Apple site and install Homebrew from brew.sh. If you have Apple silicon chipset, please setup it to /opt/homebrew as recommended on the Homebrew website
-After that, install necessary dependencies with:
+Install latest XCode from App Store or directly from official Apple site and install Homebrew from brew.sh. If you have Apple silicon chipset, please setup it to `/opt/homebrew` as recommended on the Homebrew website. After you have installed Homebrew, install necessary dependencies with:
 ```
 brew install cmake sqlite3
 ```
@@ -26,9 +25,8 @@ cd cellframe-node
 ## 3. Build Cellframe node using CMake framework and install Cellframe node
 Use the following commands (separately) to build the node:
 ```
-mkdir build
+cmake -B build
 cd build
-cmake ../
 make -j$(nproc)
 ```
 After build process has finished, you may create an installation package for Debian and it's derivatives with the command `cpack` and install it with:

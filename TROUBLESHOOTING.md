@@ -1,19 +1,25 @@
 # Troubleshooting / FAQ
 
-## Where are the configuration files located?
-
-Cellframe node uses `/opt/cellframe-node/etc/cellframe-node.cfg` file as it's configuration file.
-For different networks, configuration files are placed in `/opt/cellframe-node/etc/network/`.
-
 ## Where are the log files located?
 
-By default, Cellframe node log file can be found at `/opt/cellframe-node/var/log/cellframe-node.log`.
+On Linux systems:
+```
+/opt/cellframe-node/var/log/
+```
+On MacOS:
+```
+/Users/$USER/Applications/CellFrame.app/contents/resources/etc/cellframe-node.cfg`
+```
+
+## My log files are getting really large, how to prevent it?
+
+Cellframe node uses `logrotate` on Linux to rotate log files daily if log file size exceeds 1GB. If your log files are not rotated correctly, you should check if you have `logrotate` installed and have the proper configuration file available in `/etc/logrotate.d/` directory.
 
 ## How to remove Cellframe node?
 
 **NOTE: Be careful, take a backup of your created wallets from `/opt/cellframe-node/var/lib/wallet/` before proceeding!**
 
-On Debian and it's derivatives, you can use `apt remove cellframe-node` and delete folder `/opt/cellframe-node` after removal. 
+On Debian and it's derivatives, you can use `apt remove cellframe-node` and delete `/opt/cellframe-node` directory after removal.
 
 On other Linux systems:
 ```
@@ -29,5 +35,5 @@ sudo rm -rf /opt/cellframe-node
 During debugging, the configuration files located in /opt/cellframe-node/ are used. Therefore, it is necessary to grant access rights to this directory to the user who will do the debugging.
 
 ```
-sudo chown user_name /opt/cellframe-node/
+sudo chown <username> /opt/cellframe-node/
 ```
