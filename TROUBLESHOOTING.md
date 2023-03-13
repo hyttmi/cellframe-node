@@ -8,7 +8,7 @@ On Linux systems:
 ```
 On MacOS:
 ```
-/Users/$USER/Applications/CellFrame.app/contents/resources/etc/cellframe-node.cfg`
+/Users/$USER/Applications/CellFrame.app/contents/resources/var/log/
 ```
 
 ## My log files are getting really large, how to prevent it?
